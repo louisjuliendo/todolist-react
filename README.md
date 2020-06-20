@@ -1,5 +1,11 @@
 # To Do List
 
+## Screenshot
+
+<p align="center">
+  <img src="public/demo.png"/>
+</p>
+
 ## Features
 
 - Add todo
