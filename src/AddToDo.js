@@ -36,8 +36,8 @@ export default class AddToDo extends React.Component {
   };
   render() {
     return (
-      <div class='addToDo'>
-        <h3 class='text-center'>Add ToDo</h3>
+      <div className='addToDo'>
+        <h3 className='text-center'>Add ToDo</h3>
         <form onSubmit={this.handleToDoSubmit}>
           <div className='form-group col-lg-4 center-item'>
             <input
@@ -61,7 +61,7 @@ export default class AddToDo extends React.Component {
               <option value='Pending'>Pending</option>
             </select>
           </div>
-          <div class='col-md-4 center-item'>
+          <div className='col-md-4 center-item'>
             <button type='submit' className='form-control btn btn-primary'>
               Add Todo
             </button>
