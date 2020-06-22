@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 
 const AddToDo = (props) => {
-  const [todos, setTodos] = useState({
+  const [todo, setTodo] = useState({
     Id: "",
     Title: "",
     Status: "Pending",
   });
 
   const handleIdChange = (e) => {
-    setTodos({ ...todos, Id: e.target.value });
+    setTodo({ ...todo, Id: e.target.value });
   };
   const handleTitleChange = (e) => {
-    setTodos({ ...todos, Title: e.target.value });
+    setTodo({ ...todo, Title: e.target.value });
   };
   const handleStatusChange = (e) => {
-    setTodos({ ...todos, Status: e.target.value });
+    setTodo({ ...todo, Status: e.target.value });
   };
 
   const handleToDoSubmit = (e) => {
     e.preventDefault();
 
-    props.onAdd(todos);
+    props.onAdd(todo);
 
-    setTodos({
+    setTodo({
       Id: "",
       Title: "",
       Status: "Pending",
@@ -33,13 +33,13 @@ const AddToDo = (props) => {
       <h3 className='text-center'>Add ToDo</h3>
       <form onSubmit={handleToDoSubmit}>
         <div className='form-group col-lg-4 center-item'>
-          <input value={todos.Id} onChange={handleIdChange} className='form-control' placeholder='Enter Id' />
+          <input value={todo.Id} onChange={handleIdChange} className='form-control' placeholder='Enter Id' />
         </div>
         <div className='form-group col-lg-4 center-item'>
-          <input value={todos.Title} onChange={handleTitleChange} className='form-control' placeholder='Enter Title' />
+          <input value={todo.Title} onChange={handleTitleChange} className='form-control' placeholder='Enter Title' />
         </div>
         <div className='form-group col-lg-4 center-item'>
-          <select value={todos.Status} onChange={handleStatusChange} className='form-control'>
+          <select value={todo.Status} onChange={handleStatusChange} className='form-control'>
             <option value='Done'>Done</option>
             <option value='Pending'>Pending</option>
           </select>
