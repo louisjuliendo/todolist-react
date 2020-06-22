@@ -47,12 +47,12 @@ const ToDoList = () => {
         <td>{todo.Title}</td>
         <td style={{ color: todo.Status === "Done" ? "green" : "red" }}>{todo.Status}</td>
         <td>
-          <button className='btn btn-primary' onClick={() => deleteToDo(todo)}>
+          <button className='btn btn-primary m-1' onClick={() => deleteToDo(todo)}>
             <span>
               <FontAwesomeIcon icon='trash'></FontAwesomeIcon>
             </span>
           </button>
-          <button className='btn btn-primary' onClick={() => editToDo(todo)}>
+          <button className='btn btn-primary m-1' onClick={() => editToDo(todo)}>
             <span>
               <FontAwesomeIcon icon='edit'></FontAwesomeIcon>
             </span>
